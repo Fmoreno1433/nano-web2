@@ -1,0 +1,49 @@
+@use "sass:map";
+@use "variables" as v;
+@use "functions" as f;
+
+// 1. Media query responsive (desktop-first) con @content
+@mixin respond($bp) {
+  @media (max-width: map.get(v.$breakpoints, $bp)) {
+    @content;
+  }
+}
+
+// 2. Contenedor centrado con ancho máximo
+@mixin container($max: v.$container-max) {
+  max-width: $max;
+  margin-inline: auto;
+  padding-inline: f.rem(v.$space-md);
+
+  @include respond(md) {
+    padding-inline: f.rem(v.$space-sm);
+  }
+}
+
+// 3. Variante de botón (fondo, texto, fondo en hover)
+@mixin button-variant($bg, $fg, $hover) {
+  background: $bg;
+  color: $fg;
+
+  &:hover {
+    background: $hover;
+  }
+}
+
+// 4. Rejilla auto-adaptable
+@mixin grid-auto($min: f.rem(280), $gap: f.rem(v.$space-md)) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($min, 1fr));
+  gap: $gap;
+}
+
+// 5. Franja de piano (kerb) rojo y blanco
+@mixin kerb-bar($side: bottom, $height: f.rem(8)) {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  #{$side}: 0;
+  height: $height;
+  background: repeating-linear-gradient(90deg, v.$color-kerb 0 f.rem(24), v.$color-white f.rem(24) f.rem(48));
+}
