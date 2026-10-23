@@ -1,0 +1,34 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
+
+.btn {
+  @include m.button-variant(v.$color-kerb, v.$color-white, v.$color-kerb-dark);
+  display: inline-block;
+  padding: f.rem(12) f.rem(24);
+  font: 700 f.rem(18) v.$font-display;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &--dark {
+    @include m.button-variant(v.$color-ink, v.$color-white, #000);
+  }
+
+  &--ghost {
+    @include m.button-variant(transparent, v.$color-white, rgba(255, 255, 255, 0.14));
+    border-color: v.$color-white;
+  }
+
+  &--small {
+    padding: f.rem(8) f.rem(16);
+    font-size: f.rem(16);
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
