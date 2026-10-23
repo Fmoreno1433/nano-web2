@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/functions" as f;
+@use "../abstracts/mixins" as m;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: v.$color-ink;
+  color: v.$color-white;
+
+  &::after {
+    @include m.kerb-bar(bottom, f.rem(6));
+  }
+
+  &__inner {
+    @include m.container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: f.rem(72);
+  }
+
+  &__logo {
+    font-family: v.$font-display;
+    font-size: f.rem(30);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+
+    span {
+      color: v.$color-kerb;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    padding: f.rem(8) f.rem(16);
+    font: 600 f.rem(16) v.$font-body;
+    color: v.$color-white;
+    background: transparent;
+    border: 2px solid v.$color-white;
+    cursor: pointer;
+
+    @include m.respond(md) {
+      display: block;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    gap: f.rem(v.$space-xs);
+  }
+
+  &__link {
+    display: block;
+    padding: f.rem(8) f.rem(16);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    &--active,
+    &--active:hover {
+      background: v.$color-yellow;
+      color: v.$color-ink;
+    }
+  }
+
+  @include m.respond(md) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: f.rem(v.$space-sm);
+    background: v.$color-ink;
+
+    &--open {
+      display: block;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+  }
+}
