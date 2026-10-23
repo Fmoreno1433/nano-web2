@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ficha de producto · Paddock</title>
+<meta name="description" content="Ficha técnica de la réplica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="header">
+  <div class="header__inner">
+    <a class="header__logo" href="index.html">PADDOCK<span>.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav class="nav" id="menu" aria-label="Principal"><ul class="nav__list"><li><a class="nav__link" href="index.html">Inicio</a></li><li><a class="nav__link" href="catalogo.html">Catálogo</a></li><li><a class="nav__link nav__link--active" href="producto.html" aria-current="page">Ficha</a></li><li><a class="nav__link" href="contacto.html">Contacto</a></li></ul></nav>
+  </div>
+</header>
+<main>
+<div class="detail" id="product-detail">
+  <div>
+    <img class="detail__img" src="img/lotus-97t.jpg" alt="Lotus 97T negro y dorado con el número 11 tomando una curva">
+  </div>
+  <div>
+    <a class="detail__back" href="catalogo.html">Volver al catálogo</a>
+    <h1 class="detail__title">Lotus 97T (1985)</h1>
+    <p class="detail__price">189 €</p>
+    <p class="detail__text">Librea negra y dorada de John Player Special con motor Renault turbo.</p>
+    <dl class="detail__specs"><dt>Piloto</dt><dd>Elio de Angelis (#11)</dd><dt>Motor</dt><dd>Renault EF15 V6 turbo 1.5 L</dd><dt>Escala</dt><dd>1:18</dd><dt>Material</dt><dd>Metal fundido y resina</dd></dl>
+    <a class="btn btn--block" href="contacto.html">Reservar esta réplica</a>
+  </div>
+</div>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <div><h2 class="footer__title">Paddock</h2><p class="footer__text">Réplicas a escala 1:18 de monoplazas de Fórmula 1 que hicieron historia.</p></div>
+    <div><h2 class="footer__title">Tienda</h2><ul><li><a class="footer__link" href="catalogo.html">Catálogo</a></li><li><a class="footer__link" href="producto.html">Ficha de producto</a></li></ul></div>
+    <div><h2 class="footer__title">Ayuda</h2><ul><li><a class="footer__link" href="contacto.html">Contacto</a></li><li><a class="footer__link" href="index.html">Inicio</a></li></ul></div>
+  </div>
+  <p class="footer__legal">© 2026 Paddock. Proyecto académico, productos y precios ficticios.</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
