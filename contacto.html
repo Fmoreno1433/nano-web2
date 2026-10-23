@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto · Paddock</title>
+<meta name="description" content="Contacta con Paddock.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="header">
+  <div class="header__inner">
+    <a class="header__logo" href="index.html">PADDOCK<span>.</span></a>
+    <button class="header__toggle" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav class="nav" id="menu" aria-label="Principal"><ul class="nav__list"><li><a class="nav__link" href="index.html">Inicio</a></li><li><a class="nav__link" href="catalogo.html">Catálogo</a></li><li><a class="nav__link" href="producto.html">Ficha</a></li><li><a class="nav__link nav__link--active" href="contacto.html" aria-current="page">Contacto</a></li></ul></nav>
+  </div>
+</header>
+<main>
+<section class="page-title"><div class="page-title__inner"><h1 class="page-title__title">Contacto</h1><p class="page-title__lead">Cuéntanos qué réplica buscas y te respondemos en 24 horas.</p></div></section>
+<section class="section"><div class="section__inner">
+<form class="form" id="contact-form">
+  <label class="form__field">Nombre<input class="form__input" name="nombre" type="text" required autocomplete="name"></label>
+  <label class="form__field">Correo electrónico<input class="form__input" name="email" type="email" required autocomplete="email"></label>
+  <label class="form__field">Modelo de interés
+    <select class="form__input" name="modelo"><option>Lotus 97T</option><option>Renault R25</option><option>Ferrari F2004</option><option>Ferrari F2012</option><option>Mercedes W07</option><option>Aston Martin AMR23</option></select></label>
+  <label class="form__field">Mensaje<textarea class="form__input" name="mensaje" rows="5" required></textarea></label>
+  <button class="btn" type="submit">Enviar mensaje</button>
+  <p class="form__status" role="status"></p>
+</form></div></section>
+</main>
+<footer class="footer">
+  <div class="footer__inner">
+    <div><h2 class="footer__title">Paddock</h2><p class="footer__text">Réplicas a escala 1:18 de monoplazas de Fórmula 1 que hicieron historia.</p></div>
+    <div><h2 class="footer__title">Tienda</h2><ul><li><a class="footer__link" href="catalogo.html">Catálogo</a></li><li><a class="footer__link" href="producto.html">Ficha de producto</a></li></ul></div>
+    <div><h2 class="footer__title">Ayuda</h2><ul><li><a class="footer__link" href="contacto.html">Contacto</a></li><li><a class="footer__link" href="index.html">Inicio</a></li></ul></div>
+  </div>
+  <p class="footer__legal">© 2026 Paddock. Proyecto académico, productos y precios ficticios.</p>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
