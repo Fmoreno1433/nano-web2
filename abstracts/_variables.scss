@@ -1,0 +1,37 @@
+// Colores
+$color-ink: #15181d;
+$color-paper: #f2f3f5;
+$color-white: #ffffff;
+$color-kerb: #d62828;
+$color-kerb-dark: #b01e1e;
+$color-yellow: #ffd60a;
+$color-grey: #5b6270;
+$color-line: #d9dce1;
+
+// Mapa de escuderías (se recorre con @each en _card.scss)
+$teams: (
+  lotus: #c9a227,
+  renault: #ffd60a,
+  ferrari: #d62828,
+  mercedes: #00a19c,
+  aston: #0b6b57
+);
+
+// Tipografías
+$font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+$font-body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+// Espaciados (px sin unidad; se convierten con rem())
+$space-xs: 8;
+$space-sm: 16;
+$space-md: 24;
+$space-lg: 48;
+$space-xl: 72;
+
+// Breakpoints
+$breakpoints: (
+  sm: 480px,
+  md: 768px,
+  lg: 1100px
+);
+$container-max: 1200px;
